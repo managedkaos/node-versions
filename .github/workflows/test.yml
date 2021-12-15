@@ -6,6 +6,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false # Keep the '2.x' test from stopping the other jobs
       matrix:
         python-version: [ '2.x', '3.8', '3.9', '3.10' ]
     name: Testing with Python ${{ matrix.python-version }}

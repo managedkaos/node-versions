@@ -7,7 +7,10 @@ jobs:
     strategy:
       fail-fast: false # Keep the '2.x' test from stopping the other jobs
       matrix:
-        os: [ubuntu-latest, macos-latest, windows-latest]
+        os:
+          - ubuntu-latest
+          - macos-latest
+          - windows-latest
         python-version: [ '2.x', '3.8', '3.9', '3.10' ]
     runs-on: ${{ matrix.os }}
     name: Testing with Python ${{ matrix.python-version }} on ${{ matrix.os }}

@@ -25,5 +25,3 @@ jobs:
       - run: pip install --requirement requirements.txt
       - run: python lookup.py LAX
       - run: python lookup.py LAX SFO ATL BWI JFK
-      - run: python lookup.py || echo "Test failed as expected"
-      - run: python lookup.py ABC XYZ || echo "Test failed as expected"
